@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "nodemon index.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
