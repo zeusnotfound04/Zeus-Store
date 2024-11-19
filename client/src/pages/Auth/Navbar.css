@@ -1,21 +1,24 @@
-#navigation-container{
+/* Sidebar initially collapsed */
+#navigation-container {
     width: 4%;
     transition: width 0.3s ease-in-out;
 }
 
-#navigation-container:hover{
+/* Expand sidebar on hover */
+#navigation-container:hover {
     width: 15%;
 }
 
-
-
-.nav-item-name{
-    display: none;
-    transition: opacity 0.2s ease-in-out;
+/* Hide text when sidebar is collapsed */
+.nav-item-name {
+    visibility: hidden;
+    opacity: 0; /* Ensure it's not visible */
+    transition: visibility 0s 0.3s, opacity 0.2s ease-in-out; /* Delay visibility change to avoid jumping */
 }
 
-
-#navigation-container:hover .nav-item-name{
-    display: block;
+/* Show text when sidebar is expanded */
+#navigation-container:hover .nav-item-name {
+    visibility: visible;
     opacity: 1;
+    transition: opacity 0.2s ease-in-out; /* Transition opacity only */
 }
