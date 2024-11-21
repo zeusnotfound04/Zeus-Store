@@ -3,7 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.mjs"
-
+import cors from "cors";
 import connectDB from "./config/db.mjs";
 import { authenticate , authorizeAdmin } from "./middlewares/authMiddleware.mjs";
 
@@ -15,6 +15,8 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 const app = express();
+
+// app.use(cors({ origin: 'http://localhost:5173' }));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended : false}));
