@@ -100,7 +100,12 @@ const Login = () => {
 
 
         </div>
+        <img src="https://wallpapers.com/images/featured/android-11-background-0ikv99bmodtep8sh.jpg" className='h-[65rem] w-[55%] xl:block md:hidden sm:hidden rounded-lg' alt="" />
       </section>
+
+
+
+      
     </div>
   );
 };

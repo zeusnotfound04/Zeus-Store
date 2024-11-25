@@ -125,6 +125,7 @@ const Register = () => {
                     </div>
                 </form>
             </div>
+            <img src="https://wallpapers.com/images/high/android-11-mountain-background-h4n2qkuy1s40oze5.webp" alt="" className='h-[65rem] w-[55%] xl:block md:hidden sm:hidden rounded-lg'/>
         </section>
     );
 };
