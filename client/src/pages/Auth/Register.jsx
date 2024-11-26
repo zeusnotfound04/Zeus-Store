@@ -39,7 +39,7 @@ const Register = () => {
      
 
         try {
-            const userData = await register({ name: username, email, password }).unwrap();
+            const userData = await register({username, email, password }).unwrap();
             dispatch(setCredentials({ ...userData }));
             toast.success("Registration successful");
             navigate(redirect);
@@ -55,14 +55,14 @@ const Register = () => {
                 <h1 className='text-2xl font-semibold mb-4'>Register</h1>
                 <form onSubmit={handleSubmit} className='container w-[40rem]'>
                     <div className='my-[2rem]'>
-                        <label htmlFor="name" className='block text-sm font-medium text-white'>Name</label>
+                        <label htmlFor="username" className='block text-sm font-medium text-white'>Username</label>
                         <input
                             type='text'
-                            id='name'
-                            name='name'
+                            id='username'
+                            name='username'
                             required
                             className='mt-1 p-2 border rounded w-full'
-                            placeholder='Enter Name'
+                            placeholder='Enter Username'
                             value={username}
                             onChange={e => setUsername(e.target.value)}
                         />
@@ -125,6 +125,9 @@ const Register = () => {
                     </div>
                 </form>
             </div>
+
+
+            <img src="https://cdn-cm.freepik.com/resources/be4da886-bbdd-400d-bff6-100ee4ab2292.jpg?token=exp=1732275664~hmac=798cd259fe609e15995775deea97074fe43d953a19ff4c8211c2b0fee910e39a" className='h-[55.5rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg' alt="registerBg" />
         </section>
     );
 };
