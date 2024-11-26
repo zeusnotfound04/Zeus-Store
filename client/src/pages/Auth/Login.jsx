@@ -105,6 +105,10 @@ const Login = () => {
 
         <img src="https://cdn-cm.freepik.com/resources/53178aa4-02db-4f12-a0d4-b1c08e524df0.jpg?token=exp=1732275987~hmac=1b34b633fd579c13448d146f0e6e0f2be0b6e1bde4dd18ed2308fe707f7fd82f" className='h-[55.5rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg' alt="loginBg" />
       </section>
+
+
+
+      
     </div>
   );
 };
