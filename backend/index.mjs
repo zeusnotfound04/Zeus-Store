@@ -2,11 +2,16 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+
+// Connect to DB
+import connectDB from "./config/db.mjs";
+
+// Routes
 import userRoutes from "./routes/userRoutes.mjs"
 import categoryRoutes from "./routes/categoryRoutes.mjs"
-import cors from "cors";
-import connectDB from "./config/db.mjs";
-import { authenticate , authorizeAdmin } from "./middlewares/authMiddleware.mjs";
+import productRoutes from "./routes/productRoutes.mjs"
+import uploadRoutes from "./routes/uploadRoutes.mjs"
+
 
 dotenv.config();
 
@@ -31,10 +36,8 @@ app.use(cookieParser())
 
 app.use("/api/users" , userRoutes)
 app.use("/api/category" , categoryRoutes) 
+app.use("/api/products" , productRoutes)
+app.use("/api/uploads" , uploadRoutes)
 
 app.listen(port, ()=> console.log(`Server started at PORT : ${port}`))
-
-app.get("/" , (req, res)=>{
-    res.send("Yessir its up!!!")
-})
 
