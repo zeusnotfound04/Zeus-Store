@@ -4,12 +4,28 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "start": "nodemon index.mjs"
+    "start": "nodemon server.mjs",
+    "backend": "node server.mjs"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^9.0.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-async-handler": "^1.2.0",
+    "express-formidable": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "path-browserify": "^1.0.1",
+    "safe-buffer": "^5.2.1"
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "dotenv": "^16.4.5"
-  }
+  "type": "module"
+  
 }

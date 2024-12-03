@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             &times;
           </button>
 
-          {/* Modal Content */}
+          {/* Modal content hai yeh */}
           <div className="mt-4">{children}</div>
         </div>
       </div>

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: store-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/zeus-store
+    depends_on:
+      - mongo
+    networks:
+      - store-network
+
+  frontend:
+    build:
+      context: ./client
+    container_name: store-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - store-network
+
+  mongo:
+    image: mongo:latest
+    container_name: store-mongo
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - store-network
+
+volumes:
+  mongo-data:
+
+networks:
+  store-network:
+    driver: bridge
