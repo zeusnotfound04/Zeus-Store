@@ -116,7 +116,7 @@ const updateCurrentUserProfile = asyncHandler(async(req, res) => {
 
             if (emailExists){
                 res.status(400)
-                throw new Error("Emal already taken")
+                throw new Error("Email already taken")
             }
 
             if (usernameExists){
